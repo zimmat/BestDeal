@@ -16,6 +16,6 @@ describe('Best deal',function(){
     assert.equal(mostExpensiveDeal(),3.5);
   });
   it('should return the average price deal',function(){
-    assert.equal(averagePrice(),6.37);
+    assert.equal(averagePrice(),3.18);
   });
 });

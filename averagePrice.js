@@ -5,10 +5,7 @@ module.exports = function(quantity,price){
   Dealprice.forEach(function(deal){
     total += deal;
   });
-  console.log(total);
-  Dealprice.forEach(function(deal){
-    total += deal;
-  });
+  // console.log(total);
   var avg = 0;
   Dealprice.forEach(function(deal){
   avg = Number((total / Dealprice.length).toFixed(2));
