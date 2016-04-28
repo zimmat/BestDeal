@@ -1,14 +1,16 @@
 module.exports = function(fruition){
-  //  console.log(fruition);
   var cheapest = 100;
-  //loop through shops
-  for(var shop in fruition){
-    var fruit = fruition[shop];
-    // console.log(fruit);
-      if(fruit > cheapest){
-        cheapest = fruit;
-    }
-  }
-    console.log(cheapest);
-  return cheapest;
+      var cheapestFruit= [];
+      for(var fruit in fruition){
+        var fruitName = fruition[fruit];
+        console.log(fruitName);
+        if(fruitName < cheapest){
+           cheapest = fruitName;
+          fruitTypes.push(cheapest);
+        }
+
+          }
+   console.log(cheapestFruit);
+
+  return cheapestFruit;
   }

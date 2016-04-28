@@ -47,13 +47,12 @@ describe('fruition', function(){
     assert.deepEqual(apples_desceending(fruition),[["chockers", 5], ["woolingsworth", 4], ["kwakspar", 4], ["shopwrong", 2]]);
   });
   it('should return the cheapest fruit', function(){
-    assert.deepEqual(cheapest_fruit(fruition),[["bananas",2],
-        "apples", 2]]);
+    assert.deepEqual(cheapest_fruit(fruition),[["bananas",2],["apples", 2]]);
   });
   it('should return the seller of the fruit with the lowest price', function(){
     assert.deepEqual(seller_with_lowest_price(fruition),["checkers","shopwrong"]);
   });
   it('return all the shops that sell oranges', function(){
-    assert.deepEqual(shops_that_sell_oranges(fruition),["kwakspar","pickle pay", "chockers", "woolingsworth"]);
+    assert.deepEqual(shops_that_sell_oranges(fruition),["woolingsworth","chockers","pickle pay","kwakspar"]);
   });
 });

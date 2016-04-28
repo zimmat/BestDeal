@@ -10,8 +10,6 @@ module.exports = function(fruition){
     appleInDescending.push([apple, appleSellers[apple]]);
   }
 
-  console.log(appleInDescending);
-
   appleInDescending.sort(function(a,b){
     return b[1] - a[1];
   });
