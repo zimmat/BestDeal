@@ -40,36 +40,20 @@ describe('fruition', function(){
     assert.equal(cheapest_oranges(fruition),"chockers");
   });
   it('should return the prices and sellers of apples, order ascending by price',function(){
-    assert.deepEqual(apples_ascending(),{ "shopwrong":{"apples": 2 },
-    "kwakspar": {
-    "apples": 4},
-    "woolingsworth":{
-      "apples": 4},
-    "chockers": {
-      "apples": 5}
-    });
+
+    assert.deepEqual(apples_ascending(fruition),[["shopwrong", 2], ["woolingsworth", 4], ["kwakspar", 4], ["chockers", 5]]);
   });
   it('should return the prices and sellers of apples, order descending by price', function(){
-    assert.deepEqual(apples_desceending(),{"chockers": {
-      "apples": 5},
-      "woolingsworth":{
-        "apples": 4},
-        "kwakspar": {
-        "apples": 4},
-        "shopwrong":{
-          "apples": 2 }
-    });
+    assert.deepEqual(apples_desceending(fruition),[["chockers", 5], ["woolingsworth", 4], ["kwakspar", 4], ["shopwrong", 2]]);
   });
   it('should return the cheapest fruit', function(){
-    assert.deepEqual(cheapest_fruit(),{"chockers": {
-      "bananas": 2},"shopwrong": {
-        "apples": 2}
-      });
+    assert.deepEqual(cheapest_fruit(fruition),[["bananas",2],
+        "apples", 2]]);
   });
   it('should return the seller of the fruit with the lowest price', function(){
-    assert.deepEqual(seller_with_lowest_price(),["checkers","shopwrong"]);
+    assert.deepEqual(seller_with_lowest_price(fruition),["checkers","shopwrong"]);
   });
   it('return all the shops that sell oranges', function(){
-    assert.deepEqual(shops_that_sell_oranges(),["kwakspar","pickle pay", "chockers", "woolingsworth"]);
+    assert.deepEqual(shops_that_sell_oranges(fruition),["kwakspar","pickle pay", "chockers", "woolingsworth"]);
   });
 });
