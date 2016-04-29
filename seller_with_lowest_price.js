@@ -1,21 +1,19 @@
 module.exports = function(fruition){
-  module.exports = function(fruition){
-    var cheapest = 100;
-    var shopName = "";
-        var cheapestFruit= [];
-        for(var shop in fruition){
-          console.log(shop);
-          var fruitName = fruition[shop];
-          console.log(fruitName);
-          if(fruitName < cheapest){
-             cheapest = fruitName;
-            fruitTypes.push(cheapest);
-            shopName = shop;
-          }
+  var cheapest = 3;
+  var cheapestSeller = [];
+  for (var shop in fruition) {
+    for (fruitName in fruition[shop]) {
+      var fruitInAlist = fruition[shop];
+      var fruitPrice = fruitInAlist[fruitName];
+      if (fruitPrice < cheapest) {
+        //cheapest = fruitName;
+        console.log(fruitPrice);
+        // cheapFruit = fruitName;
+         cheapestSeller.push(shop);
+      }
 
-            }
-     console.log(shopName);
-
-    return shopName;
     }
+  }
+  console.log(cheapestSeller);
+  return cheapestSeller;
 }
